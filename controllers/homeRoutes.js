@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Article, Comment, User} = require('../models');
+const { Article, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -19,26 +19,27 @@ router.get('/', async (req, res) => {
 
     const articles = articleData.map((article) => article.get({ plain: true }));
 
-    res.render('homepage', { 
-      articles, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      articles,
+      loggedIn: req.session.loggedIn
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/signin', (req, res) => {
-  if (req.session.logged_in) {
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
-  res.render('signin');
+  res.render('login');
 });
 
 router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
@@ -66,18 +67,18 @@ router.get('/articles/:id', async (req, res) => {
 
     const articleSingle = articleData.get({ plain: true });
 
-    res.render('viewArticle', { 
-      articleSingle, 
-      logged_in: req.session.logged_in 
+    res.render('viewArticle', {
+      articleSingle,
+      loggedIn: req.session.loggedIn
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-// ORGANIZATIONAL NOTE: Included this one withAuth route here to avoid adding commentRoutes.js file.
-router.get('/updateComment/:id', withAuth, async (req, res) => {  
+router.get('/comment/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.findByPk(req.params.id, {
       where: {
@@ -88,10 +89,11 @@ router.get('/updateComment/:id', withAuth, async (req, res) => {
 
     const comment = commentData.get({ plain: true });
 
-    res.render('updateComment', {
+    res.render('comment', {
       comment,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
+    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

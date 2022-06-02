@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Article, User} = require('../models');
+const { Article, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -18,8 +18,9 @@ router.get('/', withAuth, async (req, res) => {
 
     res.render('dashboard', {
       articles,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -27,14 +28,14 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/newArticle', withAuth, async (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.render('newArticle');
   } else {
-  res.redirect('/signin');
+    res.redirect('/login');
   }
 });
 
-router.get('/updateArticle/:id', withAuth, async (req, res) => {  
+router.get('/updateArticle/:id', withAuth, async (req, res) => {
   try {
     const articleData = await Article.findOne({
       where: {
@@ -47,8 +48,9 @@ router.get('/updateArticle/:id', withAuth, async (req, res) => {
 
     res.render('updateArticle', {
       article,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
