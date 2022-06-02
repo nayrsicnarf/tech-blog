@@ -19,7 +19,7 @@
     <header>
         <nav class='navbar navbar-expand-lg fixed-top px-3 techblog-nav'>
             <a class='navbar-brand' href='/'>TECH BLOG</a>
-            <button class='navbar-toggler custom-toggler' id='hamburger' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+            <button class='navbar-toggler custom-toggler' id='hamburger' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false'>
             <span class='navbar-toggler-icon'></span>
             </button>
                 <ul class='collapse navbar-collapse list-unstyled justify-content-end pt-3' id='navbarSupportedContent'>
@@ -27,7 +27,7 @@
                     <li class='nav-item'><a class='nav-link' href='/dashboard'>Dashboard</a></li>
 
                 {{#if logged_in}}
-                <li class='nav-item'><a class='nav-link' id='btn-logout' href='/' rel='noreferrer noopener'>Log Out</a></li>
+                <li class='nav-item'><a class='nav-link' id='btn-logout' href='/logout' rel='noreferrer noopener'>Log Out</a></li>
                 {{else}}
                 <li class='nav-item'><a class='nav-link' id='btn-login' href='/login' rel='noreferrer noopener'>Log In</a></li>
                 <li class='nav-item'><a class='nav-link' id='btn-signup' href='/signup' rel='noreferrer noopener'>Sign Up</a></li>
@@ -49,7 +49,7 @@
     <footer class='footer bg-dark'>
         <section id='cmb-contact' class='text-center py-2 align-items-center'>
             <h4>Contact</h4>
-            <a class='cmb-fa px-4' href='www.linkedin.com/in/fryaguinaldo' target='_blank' rel='noreferrer noopener'>
+            <a class='cmb-fa px-4' href='https://www.linkedin.com/in/fryaguinaldo/' target='_blank' rel='noreferrer noopener'>
                 <i class='fab fa-linkedin-in'></i>
             </a>
             <a class='cmb-fa px-4' href='https://github.com/nayrsicnarf' target='_blank' rel='noreferrer noopener'> 
@@ -64,7 +64,7 @@
 
     {{#if logged_in}}
 
-    <script src="/js/logout.js"></script>
+    <script src="./js/logout.js"></script>
 
     {{/if}}
 

@@ -5,7 +5,7 @@
 - [Tech Blog](#tech-blog)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
-  - [GitHub Repository, Video Demo, and Heroku Deployment](#github-repository-video-demo-and-heroku-deployment)
+  - [GitHub Repository and Heroku Deployment](#github-repository-and-heroku-deployment)
   - [Technologies](#technologies)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -16,11 +16,9 @@
 
 The goal of this assignment is to 
 
-## GitHub Repository, Video Demo, and Heroku Deployment
+## GitHub Repository and Heroku Deployment
 
 - [GitHub Repository]()
-
-- [Video Demonstration]()
 
 - [Heroku Deployment]()
 
