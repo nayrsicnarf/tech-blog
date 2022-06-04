@@ -8,7 +8,9 @@
 
       <form class='updateCommentForm'>
         <div class='form-group'>
+
           <textarea type='text' class='form-control' id='commentContent' required='true' value='{{comment.content}}'>{{comment.content}}</textarea>
+          
         </div>
 
         <button class='btn btn-primary' id='btn-save' data-id='{{comment.id}}' type='submit'>Save</button>
