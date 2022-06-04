@@ -2,7 +2,7 @@ body {
     background-color: #FFFAFA;
     font-family: 'Roboto', sans-serif;
     color: #778899;
-    height: 100px;
+    height: 100vh;
 }
 
 .techblog-nav {
@@ -19,9 +19,9 @@ body {
 } 
 
 main {
-    padding-top: 7px;
-    padding-bottom: 8px;
-    width: 100px;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+    width: 100vw;
 }
 
 a:link, a:visited, a:hover, a:active { 
@@ -79,12 +79,12 @@ h2, h3, h4, h5 {
 .comments {
     background-color: #FFFAFA;
     border: 1px solid #696969;
-    padding: 1px;
+    padding: 1em;
 }
 
 .comment {
     border-radius: 10px;
-    padding: 1px;
+    padding: 1em;
     background-color: #FFFAFA;
 }
 
@@ -98,33 +98,31 @@ h2, h3, h4, h5 {
 .btn-primary, .btn-primary:active, .btn-primary:visited {
     color: #FFFAFA;
     background-color: #F08080;
-    border: 1px solid v#F08080;
+    border: .1em solid v#F08080;
     border-radius: 10px;
-    margin: 5px 1px 1px 0;
+    margin: .5em 1em 1em 0;
     cursor: pointer;
 }
 
 .btn-primary:hover {
     color: #FFFAFA;
     background-color: #F08080;
-    border: 1px solid #F08080;
-    box-shadow: 8px 15px 10px #696969;
+    border: .1em solid #F08080;
     transform: scale(1.04);
 }
 
 .btn-warning, .btn-warning:active, .btn-warning:visited {
     color: #FFFAFA;
     background-color: #1E90FF;
-    border: 1px solid #1E90FF;
+    border: .1em solid #1E90FF;
     border-radius: 10px;
-    margin: 5px 1px 1px 0;
+    margin: .5em 1em 1em 0;
     cursor: pointer;
 }
 
 .btn-warning:hover {
     background-color: #1E90FF;
     border: .1em solid #1E90FF;
-    box-shadow: 8px 15px 10px #696969;
     transform: scale(1.04);
 }
 
@@ -149,6 +147,6 @@ h2, h3, h4, h5 {
 
 @media screen and (max-width: 281px){
     main {
-    padding-top: 8px;
+    padding-top: 8rem;
 }
 }
