@@ -10,12 +10,12 @@ body {
 }
 
 .navbar-brand {
-    font-size: xx-large;
+    font-size: large;
 }
 
 .custom-toggler.navbar-toggler {
     border-color: #DAA520;
-    border-width: medium;
+    border-width: small;
 } 
 
 main {
@@ -79,12 +79,12 @@ h2, h3, h4, h5 {
 .comments {
     background-color: #FFFAFA;
     border: 1px solid #696969;
-    padding: 1em;
+    padding: 1px;
 }
 
 .comment {
     border-radius: 10px;
-    padding: 1em;
+    padding: 1px;
     background-color: #FFFAFA;
 }
 
@@ -108,7 +108,7 @@ h2, h3, h4, h5 {
     color: #FFFAFA;
     background-color: #F08080;
     border: .1em solid #F08080;
-    transform: scale(1.04);
+    transform: scale(1);
 }
 
 .btn-warning, .btn-warning:active, .btn-warning:visited {
@@ -123,7 +123,7 @@ h2, h3, h4, h5 {
 .btn-warning:hover {
     background-color: #1E90FF;
     border: .1em solid #1E90FF;
-    transform: scale(1.04);
+    transform: scale(1);
 }
 
 .footer {
